@@ -58,7 +58,7 @@ namespace GuessTheNumber
             {
                 PlayGame();
             }
-            Console.WriteLine("bye bye n.n");
+            Console.WriteLine("bye bye n.n!");
         }
     }
 }
