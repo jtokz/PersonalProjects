@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCalculator", "Consol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessTheNumber", "GuessTheNumber\GuessTheNumber.csproj", "{233C35AD-A133-4392-A35B-7A522E35D410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeByJordan", "TicTacToeByJordan\TicTacToeByJordan.csproj", "{12AA40D5-0139-4180-B5FB-F1838FB0CCD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeByJordan", "TicTacToeByJordan\TicTacToeByJordan.csproj", "{12AA40D5-0139-4180-B5FB-F1838FB0CCD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangmanGame", "HangmanGame\HangmanGame.csproj", "{1A5350EF-070F-4EDF-90A5-1979ABA5E344}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{12AA40D5-0139-4180-B5FB-F1838FB0CCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12AA40D5-0139-4180-B5FB-F1838FB0CCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12AA40D5-0139-4180-B5FB-F1838FB0CCD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5350EF-070F-4EDF-90A5-1979ABA5E344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5350EF-070F-4EDF-90A5-1979ABA5E344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5350EF-070F-4EDF-90A5-1979ABA5E344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5350EF-070F-4EDF-90A5-1979ABA5E344}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
