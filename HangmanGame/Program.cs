@@ -14,12 +14,12 @@ namespace HangmanGame
     /// [*] isValid true
     /// [*] isValid = false: one step closer to death
     /// [*] Separate all code in different methods
-    /// [] Winning conditions
-    /// [] Losse conditions
-    /// [] Play again
-    /// [] Reset
-    /// [] Exit
-    /// [] for now...
+    /// [*] Winning conditions
+    /// [*] Losse conditions
+    /// [*] Play again
+    /// [*] Reset
+    /// [*] Exit
+    /// [*] for now...
     /// </summary>
     class Program
     {
@@ -80,9 +80,8 @@ namespace HangmanGame
             "leon", "tigre", "elefante", "jirafa", "cebra", "mono", "hipopotamo", "rinoceronte", "cocodrilo", "leopardo",
             "aguila", "buho", "cuervo", "halcon", "colibri", "pavo real", "pinguino", "avestruz", "loro", "cotorra"
         };
-
         static void Main(string[] args)
-        {           
+        {
             Menu();
         }
 
@@ -126,10 +125,9 @@ namespace HangmanGame
             ShowCurrentGame();
             InputRequest();
         }
-        
         static int NextRandom()
         { // generate a random number between 0 and the total number of words there are
-            randomIndex = index.Next(0, words.Count); 
+            randomIndex = index.Next(0, words.Count+1); 
             return randomIndex;
         }
         static void NextWord()
@@ -224,12 +222,12 @@ namespace HangmanGame
             }
             Veredict();
         }
-
         static void Veredict()
-        {   // Aquí al ser isValid true, dará paso al método GuessedLetter lo que
-            // hará los cambios correspondientes
+        {   // Here, since isValid is true, it will give way to the GuessedLetter method
+            // which will make the corresponding changes
             if (isValid == true)
                 GuessedLetter();
+            // if isValid = false, WrongLetter method will be called
             else
                 WrongLetter();
         }
@@ -245,8 +243,9 @@ namespace HangmanGame
             InputRequest();
         }
         static void WrongLetter()
-        { // add an error, validates if user loss, show a message and request an input
+        { // add an error, validates if user has lost, show a message and request an input
             errors++;
+            // Stores the wrong letters in a List to show them on screen
             WrongLetters();
             if (errors >= 6)
                 Loss();                
@@ -271,7 +270,6 @@ namespace HangmanGame
             //     ｜( 王 ﾉ〈 (\__/)
             //     /ﾐ`ー―彡\  (•ㅅ•)
             //    / ╰    ╯ \ /    \>
-
             //";
             string winAscii = @"
                                   .--~~,__
@@ -307,6 +305,7 @@ namespace HangmanGame
         static void Reset()
         {
             errors = 0;
+            wrongLetters.Clear();
             isValid = false;
             Clear();
             Play();
@@ -315,19 +314,17 @@ namespace HangmanGame
         {
             Clear();
             string exitAscii = @"
-                      .     .
-                     (>\---/<)
-                     ,'     `.
-                    /  q   p  \
-                   (  >(_Y_)<  )    
-                    >-' `-' `-<-.
-                   /  _.== ,=.,- \
-                  /,    )`  '(    )
-                 ; `._.'      `--<
-                :     \        |  )
-                \      )       ;_/  
-                 `._ _/_  ___.'-\\\
-                    `--\\\";
+                                     .
+                                    / V\
+                                  / `  /
+                                 <<   |
+                                 /    |
+                               /      |
+                             /        |
+                           /    \  \ /
+                          (      ) | |
+                  ________|   _/_  | |
+                <__________\______)\__)";
             Console.WriteLine(exitAscii);
             Console.WriteLine("                               bye bye!");
             Environment.Exit(0);
